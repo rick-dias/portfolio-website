@@ -1,0 +1,85 @@
+/*
+Colours used
+
+Primary colour (skyblue): #099BFF
+Primary colour (blue): #215BFF
+Primary colour (gray): ##606264
+Secondary colour (light skyblue): #71C6FF
+Secondary colour (light blue): #6990FF
+Secondary colour (light gray): #929496
+*/
+
+body{
+  font-family: 'Roboto', serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 16px;
+}
+
+a {
+  color: #215BFF;
+}
+
+a:visited {
+  color: #6990FF;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: #606264;
+}
+
+div {
+    padding: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
+
+}
+
+.button {
+    border: none;
+    font-family: inherit;
+
+    background-color: #099BFF; /* Skyblue */
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border-bottom: 2px
+    -webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.button1 {
+    background-color: #099BFF; /* Skyblue */
+    color:white;
+
+}
+
+.button1:hover,
+.button1:focus {
+  cursor: pointer; /* let's the mouse appear as hand when hovering over the button */
+  opacity: 0.8; /* Reduces the opactiy of the button to 80% */
+  background-color: white; /* Skyblue */
+  color:#099BFF;
+  border: 2px solid #099BFF;
+}
