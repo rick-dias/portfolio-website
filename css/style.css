@@ -1,0 +1,264 @@
+/*
+Colours used
+
+Primary colour (skyblue): #099BFF
+Primary colour (blue): #215BFF
+Primary colour (gray): ##606264
+Secondary colour (light skyblue): #71C6FF
+Secondary colour (light blue): #6990FF
+Secondary colour (light gray): #929496
+*/
+
+/* GENERAL*/
+body{
+  font-family: 'Roboto', serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.center{
+  text-align: center;
+}
+
+/*HEADING*/
+
+h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  text-align: center; /*center text*/
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #606060;
+}
+
+h3{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #606060;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+/*LINK BUTTON*/
+a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #858585;
+}
+
+a:visited {
+  color: #099BFF;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a:active {
+  color: #099BFF;
+}
+
+div {
+  padding: 10px 5px 10px 5px;
+  margin: 10px 5px 10px 5px;
+
+}
+
+.button {
+  border: none;
+  font-family: inherit;
+  background-color: #099BFF; /* Skyblue */
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border-bottom: 2px
+  -webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.2s;
+}
+
+.button1 {
+  background-color: #099BFF; /* Skyblue */
+  color:white;
+}
+
+.button1:hover,
+.button1:focus {
+  cursor: pointer; /* let's the mouse appear as hand when hovering over the button */
+  opacity: 0.6; /* Reduces the opactiy of the button to 80% */
+  background-color: white; /* Skyblue */
+  color:#099BFF;
+  border: 2px solid #099BFF;
+}
+
+.project {
+  position: relative;
+}
+
+.project-details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0; /* Reset this to 0 */
+  padding: 10px;
+  background: rgba(9, 155, 255, 0.9);
+  cursor:pointer;
+}
+
+/* navigation*/
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  float: right;
+}
+
+.navigation > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+nav .navigation li
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/*Layout styling*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  min-width: 360px;
+  max-width: 1200px;
+}
+
+.work-img{
+ width: 350px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 3000px;
+  margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
+  padding: 0 20px; /*avoid text stick to the border of the page*/
+}
+
+.columns-container {
+  font-size: 0;
+}
+
+.column-4 {
+  width: 23%;
+  display: inline-block;
+  margin-right: 1%;
+  font-size: 16px;
+  text-align: center; /* Centers text */
+  float: left;
+}
+
+.column-4:last-child {
+  margin-right: 0;
+}
+
+
+@media all and (max-width: 1000px) {
+  .logo {
+    /* Make logo smaller by changing it's height */
+    height: 50px;
+  }
+  h1 {
+    /* Reduce font-size of heading */
+    font-size: 24px;
+    text-align: left;
+  }
+  .column-4 {
+    /* Modify 4-column to 2-columns */
+    width: 47%;
+    margin-right: 1%;
+  }
+}
+
+.column-4:nth-child(2) {
+margin-right: 0;
+}
+
+/* ANIMATION*/
+
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.svg-container {
+  margin: 0 auto;
+}
+
+svg {
+  animation: spin 10s infinite linear;
+}
+
+
+/* Border from Y to X  */
+.borderYtoX a:before, .borderYtoX a:after
+{
+  position: absolute;
+  opacity: 0.5;
+  height: 100%;
+  width: 2px;
+  content: '';
+  background: #099BFF;
+  transition: all 0.3s;
+}
+
+.borderYtoX a:before
+{
+  left: 0px;
+  top: 0px;
+}
+
+.borderYtoX a:after
+{
+  right: 0px;
+  bottom: 0px;
+}
+
+.borderYtoX a:hover:before, .borderYtoX a:hover:after
+{
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+}
